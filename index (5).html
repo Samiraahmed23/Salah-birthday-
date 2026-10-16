@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe5ee">
+<title>For Salah ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:#8e244f;text-align:center;
+ background:linear-gradient(150deg,#ffe0eb,#fff8fa,#fbd5e4);
+ font-family:Tahoma,Arial,sans-serif
+}
+.container{max-width:780px;margin:auto;padding:22px 14px 45px}
+h1{font-size:clamp(29px,7vw,44px);color:#c52868;line-height:1.5}
+h2{color:#bd386e}
+p{font-size:16px;line-height:2}
+.hidden{display:none!important}
+.hero,.card{
+ padding:22px 16px;margin:20px 0;border-radius:24px;
+ background:#ffffffdf;border:1px solid white;
+ box-shadow:0 8px 25px #bd386e18
+}
+.hero{background:linear-gradient(145deg,#fff7fa,#ffe5ef)}
+.heart{font-size:48px;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.13)}}
+.btn{
+ border:0;border-radius:30px;padding:13px 22px;margin:8px;
+ color:white;background:linear-gradient(135deg,#d63379,#ec78a5);
+ font:inherit;cursor:pointer
+}
+input{
+ width:100%;max-width:260px;padding:13px;border:1px solid #e5a0bc;
+ border-radius:12px;text-align:center;font-size:20px
+}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.photo{padding:0;border:4px solid white;border-radius:16px;overflow:hidden;background:#f8dbe7}
+.photo img{display:block;width:100%;height:180px;object-fit:cover}
+.video-list{display:grid;gap:18px}
+video{width:100%;max-height:480px;border-radius:15px;background:#f4d7e2}
+.small{font-size:13px;opacity:.85}
+.status{overflow-wrap:anywhere;background:#fff1f6;padding:10px;border-radius:12px}
+.divider{color:#d45c8b;margin:22px}
+.secret{padding:15px;background:#fff1f6;border-radius:16px}
+#lightbox{
+ position:fixed;inset:0;z-index:50;background:#270c1def;
+ display:flex;align-items:center;justify-content:center;padding:16px
+}
+#largePhoto{max-width:100%;max-height:80vh;object-fit:contain;border-radius:12px}
+.close{position:absolute;top:12px;right:12px;border:0;border-radius:50%;padding:8px 15px;font-size:24px}
+footer{padding:20px 8px}
+@media(min-width:560px){
+ .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .photo img{height:210px}
+}
+</style>
+</head>
+<body>
+<main class="container">
+
+<section id="lockScreen" class="hero">
+ <div class="heart">❤️</div>
+ <h1>Happy Birthday, Salah 🎂</h1>
+ <p>مفاجأة صغيرة معمولة مخصوص علشانك يا حبيبي ❤️</p>
+ <div class="card">
+  <h2>يومك المميز 🔐</h2>
+  <p>اكتب تاريخ ميلادك عشان تفتح مفاجأتك</p>
+  <input id="birthday" type="password" inputmode="numeric"
+   maxlength="4" placeholder="DDMM" autocomplete="off">
+  <br>
+  <button class="btn" id="openBtn">افتح مفاجأتك ❤️</button>
+  <p id="message" role="status"></p>
+ </div>
+</section>
+
+<section id="surprise" class="hidden">
+ <div class="hero">
+  <div class="heart">❤️</div>
+  <h1>كل سنة وإنت طيب يا لاح 🎂</h1>
+  <p>كل سنة وإنت طيب يا حبيبي ونور عيني ❤️</p>
+  <button class="btn" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">شوف ذكرياتنا 📸</button>
+ </div>
+
+ <div class="card">
+  <h2>رسالة من قلبي 💌</h2>
+  <p>كل سنة وإنت طيب يا حبيبي، يا نور عيني، ويا أغلى شخص على قلبي. ❤️ مش عارفة أبدأ كلامي منين، ولا أقولك إيه ولا إيه، لأن مهما اتكلمت ومهما كتبت، مش هقدر أوصفلك معزتك عندي ولا أوصفلك إنت بالنسبالي إيه. إنت من أحسن وأغلى الناس اللي قابلتهم في حياتي، وليك مكانة في قلبي أكبر من أي كلام.</p>
+  <p>نفسي نفضل دايمًا سند وضهر لبعض، ونقف جنب بعض في الأيام الحلوة والصعبة. وبطلب من ربنا يكتب لنا الخير، ويقرّب لنا كل حاجة جميلة بنتمناها، وييجي اليوم اللي نفتح فيه باب بيت واحد ونبدأ حكايتنا تحت سقف واحد، ويكون بيت مليان مودة وضحك وراحة بال وأمان. ❣️</p>
+  <p>نفسي أشوفك دايمًا مبسوط وناجح ومرتاح البال، وكل حلم بتسعى عشانه يتحقق. وإنت عارف قد إيه أنا بحبك، وقد إيه زعلك بيهمّني، وقد إيه بتمنى دايمًا أشوفك بخير. يمكن ساعات الكلام ما يقدرش يوصل اللي جوايا، بس إنت غالي عندي بطريقة أكبر من أي وصف.</p>
+  <p>وبجد، أحلى يوم في السنة بالنسبة لي هو اليوم اللي إنت اتولدت فيه. 🥹❤️ اليوم اللي جه فيه للدنيا شخص بقى له كل المكانة الحلوة دي في قلبي. يا رب كل سنة تعدّي عليك تكون أحلى من اللي قبلها، ويا رب ييجي علينا يوم نفتكر فيه عيد ميلادك وإحنا جنب بعض ونحمد ربنا على كل خير.</p>
+  <p>كل سنة وإنت حبيبي وصاحبي وسندي ونور عيني. بحبك أوي يا لاح، وربنا يكتب لنا الخير الجميل اللي بنتمناه. ❤️</p>
+  <div class="divider">♡ ─ ❤️ ─ ♡</div>
+ </div>
+
+ <div class="card" id="memories">
+  <h2>ذكرياتنا ❤️📸</h2>
+  <p>كل صورة ليها حكاية، وكل ذكرى غالية عندي.</p>
+  <div id="gallery" class="gallery"></div>
+  <p id="photoStatus" class="status small">جاري تحميل الصور...</p>
+ </div>
+
+ <div class="card">
+  <h2>لحظاتنا 🎬❤️</h2>
+  <p>لحظات صغيرة وذكريات ليها مكانة كبيرة ❤️</p>
+  <div id="videoList" class="video-list"></div>
+  <p id="videoStatus" class="status small">جاري تجهيز الفيديوهات...</p>
+  <div class="divider">❤️ 💍 ❤️</div>
+  <h2>بحبك أوي يا لاح ❤️</h2>
+ </div>
+
+ <div class="card">
+  <h2>رسالة صغيرة ليك 💌</h2>
+  <p>لسه فيه رسالة صغيرة ليك يا حبيبي...</p>
+  <button class="btn" id="secretBtn">افتح رسالتك ❤️</button>
+  <div id="secretLetter" class="secret hidden">
+   <p>لو أقدر أديك حاجة واحدة في عيد ميلادك، هتمنى إنك تشوف نفسك بعيني وتعرف قد إيه إنت شخص مميز وغالي عندي. كل سنة وإنت حبيبي وأقرب الناس لقلبي. بحبك أوي يا لاح. ❤️</p>
+  </div>
+ </div>
+
+ <footer>
+  <div class="heart">❤️</div>
+  <h2>اتمنى أمنية يا لاح ✨</h2>
+  <p>كل سنة وإنت طيب، ويا رب أيامك كلها فرحة وخير.</p>
+  <p>معمولة بحب مخصوص علشانك ❤️</p>
+ </footer>
+</section>
+</main>
+
+<div id="lightbox" class="hidden" role="dialog" aria-modal="true">
+ <button class="close" id="closePhoto" aria-label="إغلاق">×</button>
+ <img id="largePhoto" alt="صورة من ذكرياتنا">
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+$('openBtn').addEventListener('click',()=>{
+ if($('birthday').value.trim()==='3110'){
+  $('lockScreen').classList.add('hidden');
+  $('surprise').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+ }else{
+  $('message').textContent='جرّب تاني يا لاح ❤️';
+  $('birthday').value='';
+  $('birthday').focus();
+ }
+});
+$('birthday').addEventListener('keydown',e=>{
+ if(e.key==='Enter') $('openBtn').click();
+});
+$('secretBtn').addEventListener('click',()=>{
+ $('secretLetter').classList.toggle('hidden');
+});
+
+function closePhoto(){
+ $('lightbox').classList.add('hidden');
+ $('largePhoto').src='';
+}
+$('closePhoto').addEventListener('click',closePhoto);
+$('lightbox').addEventListener('click',e=>{
+ if(e.target===$('lightbox')) closePhoto();
+});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape') closePhoto();
+});
+
+const photoFiles=Array.from({length:23},(_,i)=>
+ `images/IMG-20261010-WA${String(i+1).padStart(4,'0')}.jpg`
+);
+let photosLoaded=0,photosFailed=0;
+photoFiles.forEach((src,i)=>{
+ const button=document.createElement('button');
+ button.className='photo';
+ button.type='button';
+ const img=document.createElement('img');
+ img.src=src;
+ img.alt=`ذكرى ${i+1}`;
+ img.loading='lazy';
+ img.onerror=()=>{
+  photosFailed++;
+  button.innerHTML='<span style="display:block;padding:18px">الصورة غير موجودة 💔</span>';
+  button.disabled=true;
+  updatePhotoStatus();
+ };
+ img.onload=()=>{
+  photosLoaded++;
+  updatePhotoStatus();
+ };
+ button.appendChild(img);
+ button.addEventListener('click',()=>{
+  if(img.naturalWidth){
+   $('largePhoto').src=src;
+   $('lightbox').classList.remove('hidden');
+  }
+ });
+ $('gallery').appendChild(button);
+});
+function updatePhotoStatus(){
+ $('photoStatus').textContent=
+ `الصور المحمّلة: ${photosLoaded} من 23`+
+ (photosFailed?` — تعذّر تحميل ${photosFailed} صورة. تأكدي من وجود مجلد images بجانب index.html.`:'');
+}
+
+const videoFiles=Array.from({length:3},(_,i)=>
+ `images/VID-20261012-WA${String(i).padStart(4,'0')}.mp4`
+);
+let videosReady=0,videosFailed=0;
+videoFiles.forEach((src,i)=>{
+ const wrap=document.createElement('div');
+ const video=document.createElement('video');
+ video.controls=true;
+ video.playsInline=true;
+ video.preload='metadata';
+ video.setAttribute('aria-label',`فيديو الذكرى ${i+1}`);
+ const source=document.createElement('source');
+ source.src=src;
+ source.type='video/mp4';
+ video.appendChild(source);
+ const status=document.createElement('p');
+ status.className='small';
+ status.textContent=`فيديو ${i+1}`;
+ video.addEventListener('loadedmetadata',()=>{
+  videosReady++;
+  status.textContent=`فيديو ${i+1} جاهز للتشغيل ❤️`;
+  updateVideoStatus();
+ });
+ video.addEventListener('error',()=>{
+  videosFailed++;
+  status.textContent=`الفيديو ${i+1} مش قادر يتحمّل. راجعي اسم الملف ومكانه داخل images.`;
+  updateVideoStatus();
+ });
+ wrap.appendChild(video);
+ wrap.appendChild(status);
+ $('videoList').appendChild(wrap);
+});
+function updateVideoStatus(){
+ $('videoStatus').textContent=
+ `الفيديوهات الجاهزة: ${videosReady} من 3`+
+ (videosFailed?` — تعذّر تحميل ${videosFailed}. تأكدي من رفع الملفات مع الموقع.`:'');
+}
+</script>
+</body>
+</html>
